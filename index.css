@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #ddd;
+  /* overflow-x: hidden; */
+}
+
+.hero {
+  padding: 2rem 0 0 0;
+  width: 100vw;
+  height: 100vh;
+  /* aspect-ratio: 16/9; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), #ff963522),
+    url(./img/hero3.jpg);
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 10rem;
+}
+
+.tag-line {
+  height: 90%;
+  width: 100%;
+  padding: 0 5% 0 5%;
+  color: white;
+  display: flex;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-info {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 3rem;
+  gap: 1rem;
+}
+.hero-info p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #fff9db;
+}
+.hero-info h3 {
+  color: #fff3bf;
+}
+
+.hero-info a:link,
+.hero-info a:visited {
+  margin-top: 2rem;
+  background-color: white;
+  color: #f08c00;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  /* border: 1px solid rgb(255, 255, 255); */
+}
+
+.hero-info a:hover {
+  background: #ff9635;
+  color: #e9f4fb;
+  transition: 0.5s;
+  border: none;
+}
+
+.hero a:hover,
+.hero a:active {
+  color: white;
+  /* background-color: #f08c00; */
+}
+
+.card-holder {
+  padding: 0 5% 0 5%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-grow: 1;
+  margin-bottom: 5rem;
+}
+
+.card {
+  flex-basis: 100%;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  height: 30rem;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  color: #f08c00;
+  font-size: 2rem;
+  transition: all 0.2s 0.2s ease;
+}
+
+.card img {
+  height: 100px;
+}
+
+.icon {
+  height: 10rem;
+  stroke: #f08c00;
+}
+
+.card:hover {
+  /* border: 0.05rem #f08c00 solid; */
+  background-color: #eee;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+}
