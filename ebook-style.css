@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+header {
+  background-color: #ff9635;
+  height: 6rem;
+
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 2rem;
+}
+
+.back-icon {
+  height: 3rem;
+  width: 3rem;
+  stroke: white;
+}
+
+.back-icon:hover {
+  cursor: pointer;
+}
+
 .search-icon {
   height: 2rem;
   width: 2rem;
@@ -32,46 +51,68 @@
   padding: 0 5% 0 5%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10rem;
+  gap: 1rem;
+  row-gap: 2rem;
 }
 
 .book {
-  background-color: #ff9635;
-  height: 300px;
+  /* background-color: #ff9635; */
+  /* height: 300px; */
 
   display: grid;
   grid-template-columns: 1fr 2fr;
   /* width: 100px; */
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
 }
 
 .book-poster {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   grid-row: 1 / span 2;
 }
 .book-info {
   padding: 2rem;
-  background-color: aqua;
+  /* background-color: aqua; */
   font-size: 2rem;
+}
+
+.book-info p:nth-child(2) {
+  color: #495057;
+  font-size: 1rem;
 }
 
 .book-download {
   padding: 2rem;
-  background-color: beige;
+  /* background-color: beige; */
   font-size: 1.5rem;
   display: flex;
   align-items: end;
 }
 
+.download-link {
+  text-decoration: none;
+}
 .download-btn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.3rem;
+  color: #ff9635;
 
   border: 0.1rem #ff9635 solid;
+  border-radius: 0.3rem;
+}
+
+.download-btn:hover {
+  background-color: #ff9635;
+  color: white;
+  cursor: pointer;
+}
+.download-btn:hover .download-icon {
+  stroke: white;
 }
 
 .download-icon {
+  stroke: #ff9635;
   height: 2rem;
   width: 2rem;
 }

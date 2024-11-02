@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        font-family: sans-serif;
+        font-size: large;
+    }
+    .div1{
+        
+        height:100vh;
+        color:aliceblue;
+        position: relative;
+        text-align: center;
+        
+        background: #ff9635;
+    }
+    .div1 .text{
+        margin-left:30rem ;
+        margin-right: 30rem;
+        padding-top: 2rem;
+        text-align: center;
+        font-size: x-large;
+    }
+    .div1 .text h3{
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    .sub_parent{
+        
+        color:purple;
+        position: absolute;
+        top:50vh;
+        width:80%;
+        margin-left: 6rem;
+        padding-left: 1rem;
+        display: flex;
+        background-color: aliceblue;
+        padding-bottom: 5rem;
+        border-radius: 1rem;
+    }
+    .social-icons {
+            display: flex; 
+            justify-content: space-around;
+            width: 60%; 
+            padding: 20px; 
+            
+            border-radius: 8px; 
+            
+        }
+        .icon {
+            text-align: center; 
+            flex: 1; 
+            color:black;
+            padding-right: 0.2rem;
+        }
+    .sub_parent .left_side{
+        display: block;
+        width:60%;
+        padding-top: 1rem;
+    }
+    .sub_parent .right_side{
+        padding-top: 2rem;
+        background-color: #fab005;
+        width:40%;
+        height:60vh;
+        font-family: sans-serif;
+        color:white;
+        padding-left:2rem;
+        border-radius: 1rem;
+    }
+    #Message{
+        
+        height: 5rem;
+        width:30.2rem;
+        border:0.1rem solid lightblue;
+        
+    }
+    #info{
+        width:15rem;
+        height: 2rem;
+        margin-bottom: 0.3rem;
+        border:0.1rem solid lightblue;
+    }
+    #info::placeholder{
+        color:purple;
+    }
+    .btn-success{
+        margin-left: 20.5rem;
+        margin-top: 0.35rem;
+        border:none;
+        border-radius: 1rem;
+        background-color: #ff9635;
+    }
+    .btn-success:hover{
+        background-color:#fab005;
+    }
+    .btn-success:active{
+        background-color: #ff9635;
+    }
+    .faq-container {
+        margin-top: 10rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .faq-header {
+            cursor: pointer;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: #f7f7f7;
+            transition:  0.3s;
+        }
+        .faq-header:hover {
+            background: #e2e2e2;
+        }
+        .faq-content {
+            display: none; /* Hidden by default */
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: #fafafa;
+        }
+        .faq-header.active {
+            background: #d6e9f9; /* Active header color */
+        }
+</style>
+
+<body>
+    <div class="div1">
+        <div class="text">
+            <h3 >Contact Us</h3>
+        <p>We value your feedback and inquiries! If you have any questions, suggestions, or need assistance, please don't hesitate to reach out to us. Our dedicated team is here to help you with any concerns or information you may require. You can contact us via email at support@example.com or fill out the contact form below. We strive to respond to all inquiries within 24 hours. Your engagement is important to us, and we look forward to connecting with you!</p>
+        </div>
+        
+    </div>
+    <div class="sub_parent">
+        <div class="left_side">
+            <p>Message Us</p>
+        <div class="user_info">
+            <input type="text" name="" id="info" placeholder="First Name">
+        <input type="text" name="" id="info" placeholder="Last Name">
+        <div class="user_info">
+            <input type="text" name="" id="info" placeholder="Email Address">
+        <input type="text" name="" id="info" placeholder="Phone Number">
+        </div>
+        
+        </div>
+        <div class="user_res">
+            <input type="text" name="" id="Message" placeholder="Message">
+        </div>
+        <button class="btn btn-success">SEND MESSAGE</button>
+        </div>
+        <div class="right_side">
+        <h2>Info</h2>
+        <p>NIT Meghalaya </p>
+        <p>Laitumkhrah, shillong</p>
+        <p>Meghalaya</p>
+        
+        <div class="social-icons">
+            <div class="icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <p>Facebook</p>
+            </div>
+            <div class="icon">
+                <i class="fa-brands fa-x-twitter"></i>
+                <p>Twitter</p>
+            </div>
+            <div class="icon">
+                <i class="fa-brands fa-google"></i>
+                <p>Google</p>
+            </div>
+            <div class="icon">
+                <i class="fa-brands fa-linkedin"></i>
+                <p>LinkedIn</p>
+            </div>
+            <div class="icon">
+                <i class="fa-brands fa-instagram"></i>
+                <p>Instagram</p>
+            </div>
+            </div>
+        </div>
+        
+        
+        </div>
+        <div class="container faq-container">
+            <h2>Frequently Asked Questions</h2>
+        
+            <div class="faq">
+                <div class="faq-header">1. What is the purpose of the integrated platform?</div>
+                <div class="faq-content">
+                    <p>The integrated platform aims to centralize student projects, previous year exams, and notes from various universities and colleges. It seeks to enhance peer learning, promote innovation, and facilitate cross-functional research, ultimately enriching the academic experience for students.</p>
+                </div>
+            </div>
+        
+            <div class="faq">
+                <div class="faq-header">2. Who can use this platform?</div>
+                <div class="faq-content">
+                    <p>The platform is designed for students, educators, and researchers from universities and colleges across India. It provides a space for students to showcase their work, access past exams, and share valuable notes.</p>
+                </div>
+            </div>
+        
+            <div class="faq">
+                <div class="faq-header">3. How will this platform benefit students?</div>
+                <div class="faq-content">
+                    <p><ul>Students can benefit from the platform in several ways:
+
+                        <li>Access to a vast repository of previous year exams and notes for better preparation.</li>
+                        <li>Opportunities to showcase their academic projects and receive feedback from peers.</li>
+                        <li>Enhanced collaboration across different universities, fostering a sense of community and shared learning.</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        
+            <div class="faq">
+                <div class="faq-header">5. How can students contribute to the platform?</div>
+                <div class="faq-content">
+                    <p>Students can contribute by uploading their projects, sharing their notes, and providing access to previous year exams. A simple upload process will be implemented to ensure contributions are user-friendly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <script>
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', () => {
+                // Toggle the active class on the clicked header
+                header.classList.toggle('active');
+                // Toggle the corresponding content visibility
+                const content = header.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

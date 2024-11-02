@@ -30,6 +30,7 @@
 .nav-menu a:visited {
   font-size: 2rem;
   text-decoration: none;
+  padding: 0.5rem 1rem;
   color: white;
 }
 
@@ -45,7 +46,7 @@
   border-radius: 10rem;
   position: absolute;
   left: -4%;
-  bottom: -0.5rem;
+  bottom: 0.2rem;
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s;

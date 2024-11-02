@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Upload and Display</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      html {
+        background-color: #f4f4f9;
+      }
+
+      .body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #ff9635;
+        height: 6rem;
+
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 2rem;
+      }
+
+      .back-icon {
+        height: 3rem;
+        width: 3rem;
+        stroke: white;
+      }
+
+      .back-icon:hover {
+        cursor: pointer;
+      }
+      .upload-container {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 300px;
+        margin-bottom: 2rem;
+      }
+      .upload-container h2 {
+        color: #333;
+      }
+      .file-input {
+        margin: 1rem 0;
+      }
+      .file-input input {
+        display: none;
+      }
+      .file-label {
+        padding: 10px 20px;
+        background-color: #ff9635;
+        color: #ffffff;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+      }
+      .file-label:hover {
+        background-color: #ffa151;
+      }
+      #file-name {
+        margin-top: 1rem;
+        font-style: italic;
+        color: #555;
+      }
+      .upload-btn {
+        background-color: #28a745;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .upload-btn:disabled {
+        background-color: #ccc;
+      }
+      .upload-btn:hover:enabled {
+        background-color: #fff3bf;
+      }
+      .message {
+        margin-top: 1rem;
+        font-size: 14px;
+        color: #333;
+      }
+      .file-list {
+        width: 100%;
+        max-width: 600px;
+      }
+      .file-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #fafafa;
+        margin-bottom: 10px;
+        border-radius: 4px;
+      }
+      .file-link {
+        color: #ff9635;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .file-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" class="back-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="back-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+          />
+        </svg>
+      </a>
+    </header>
+    <div class="body">
+      <div class="upload-container">
+        <h2>Upload PDF File</h2>
+
+        <div class="file-input">
+          <label class="file-label" for="file-upload">Choose PDF</label>
+          <input type="file" id="file-upload" accept=".pdf" />
+          <div id="file-name">No file chosen</div>
+        </div>
+
+        <button id="upload-btn" class="upload-btn" disabled>Upload</button>
+
+        <div id="message" class="message"></div>
+      </div>
+
+      <div class="file-list" id="file-list">
+        <h3>Uploaded Files</h3>
+      </div>
+    </div>
+
+    <script>
+      const fileInput = document.getElementById("file-upload");
+      const fileNameDisplay = document.getElementById("file-name");
+      const uploadBtn = document.getElementById("upload-btn");
+      const message = document.getElementById("message");
+      const fileList = document.getElementById("file-list");
+
+      let files = [];
+
+      fileInput.addEventListener("change", () => {
+        const file = fileInput.files[0];
+
+        if (file && file.type === "application/pdf") {
+          fileNameDisplay.textContent = `Selected: ${file.name}`;
+          uploadBtn.disabled = false;
+          message.textContent = "";
+        } else {
+          fileNameDisplay.textContent = "No file chosen";
+          uploadBtn.disabled = true;
+          message.textContent = "Please select a valid PDF file.";
+        }
+      });
+
+      uploadBtn.addEventListener("click", () => {
+        const file = fileInput.files[0];
+
+        if (file) {
+          files.push(file);
+          fileInput.value = "";
+          uploadBtn.disabled = true;
+          fileNameDisplay.textContent = "No file chosen";
+
+          displayFiles();
+          message.textContent = `File "${file.name}" uploaded successfully!`;
+          message.style.color = "green";
+        }
+      });
+
+      function displayFiles() {
+        fileList.innerHTML = "<h3>Uploaded Files</h3>";
+
+        files.forEach((file, index) => {
+          const fileItem = document.createElement("div");
+          fileItem.classList.add("file-item");
+
+          const fileLink = document.createElement("a");
+          fileLink.href = URL.createObjectURL(file);
+          fileLink.target = "_blank";
+          fileLink.textContent = file.name;
+          fileLink.classList.add("file-link");
+
+          const fileActions = document.createElement("div");
+          fileActions.innerHTML = `<a href="${fileLink.href}" download="${file.name}">&#x2B07;</a>`;
+
+          fileItem.appendChild(fileLink);
+          fileItem.appendChild(fileActions);
+
+          fileList.appendChild(fileItem);
+        });
+      }
+    </script>
+  </body>
+</html>

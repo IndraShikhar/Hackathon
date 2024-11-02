@@ -15,8 +15,12 @@ html {
   width: 100vw;
   height: 100vh;
   /* aspect-ratio: 16/9; */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), #ff963522),
-    url(./img/hero3.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.507),
+      rgba(0, 0, 0, 0.459)
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.2), #ff963522), url(./img/hero3.jpg);
   background-size: cover;
   background-position: bottom;
   margin-bottom: 10rem;
@@ -55,7 +59,7 @@ html {
   display: inline-block;
   padding: 1rem;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border-radius: 1rem;
   /* border: 1px solid rgb(255, 255, 255); */
 }
@@ -113,4 +117,14 @@ html {
   /* border: 0.05rem #f08c00 solid; */
   background-color: #eee;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.nav-main--Personal {
+  border: 1px solid white;
+  display: flex;
+}
+
+.nav-menu .nav-main--Personal:hover::after {
+  /* width: 110%; */
+  opacity: 0;
 }

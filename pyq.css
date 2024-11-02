@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ff9635;
+  height: 6rem;
+
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 2rem;
+  margin-bottom: 5rem;
+}
+
+.back-icon {
+  height: 3rem;
+  width: 3rem;
+  stroke: white;
+}
+
+.back-icon:hover {
+  cursor: pointer;
+}
+
+.download-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.icon {
+  height: 2rem;
+}
+
+.exam-name {
+  font-size: 2rem;
+}
+
+.exams {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 2rem;
+}
+
+.exam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.exam-img {
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.exam-img img {
+  height: 20rem;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  background-color: #ff9635;
+  color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.195);
+}
+
+header .back-btn {
+  box-shadow: none;
+}
